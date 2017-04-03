@@ -5,4 +5,4 @@ Bot for Discord that performs various tasks to help users and staff. Designed fo
 ## Libraries Used
 * node.js
 * discord.js https://github.com/hydrabolt/discord.js/
-* mysql.js
+* mysql.js https://github.com/mysqljs/mysql
