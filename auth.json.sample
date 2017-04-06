@@ -1,0 +1,8 @@
+{
+  "mysqlhost": "localhost",
+  "mysqluser": "",
+  "mysqlpass": "",
+  "mysqldb": "",
+  "adminchan": "",
+  "mainserver": ""
+}
