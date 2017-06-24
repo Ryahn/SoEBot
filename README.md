@@ -6,5 +6,7 @@ Thank you to my friends at Kriekon on helping me learn MVC.
 
 ### Thank you to
 > Peter
+
 > Hearts
+
 > V. Marone
