@@ -4,7 +4,7 @@ exports.run = function(client, message, args) {
 		'better not tell you now', 'cannot predict now', 'concentrate and try again', 'don\'t count on it', 'my reply is no', 'my sources say no',
 		'very doubtful', 'lol no', 'no way', 'As If', 'Ask Me If I Care', 'Dumb Question Ask Another', 'Forget About It', 'Get A Clue', 'In Your Dreams', 'Not',
 		'Not A Chance', 'Obviously', 'Oh Please', 'Sure', 'That\'s Ridiculous', 'Well Maybe', 'What Do You Think?', 'Whatever', 'Who Cares?', 'Yeah And I\'m The Pope',
-		'Yeah Right', 'You Wish', 'You\'ve Got To Be Kidding...',];
+		'Yeah Right', 'You Wish', 'You\'ve Got To Be Kidding...','You may not be gay, but $5 is $5'];
 
 	var answer = eightBallAnswers[Math.floor(Math.random() * eightBallAnswers.length)];
 	message.channel.sendMessage(answer + '.');

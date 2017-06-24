@@ -34,7 +34,7 @@ fs.readdir('./commands/', (err, files) => {
 	log(`Loading a total of ${files.length} commands.`);
 	files.forEach(f => {
 		let props = require(`./commands/${f}`);
-		log(`Loading Command: ${props.help.name}. 👌`);
+		log(`Loading Command: ${props.help.name}. ✔️`);
 		client.commands.set(props.help.name, props);
 		props.conf.aliases.forEach(alias => {
 			client.aliases.set(alias, props.help.name);
@@ -67,25 +67,29 @@ client.elevation = message => {
        is then sent to the command handler for verification*/
 	if(!message.guild) return;
 	let permlvl = 0;
-	let mod_role = message.guild.roles.find('name', settings.modrolename);
-	if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 2;
-	let admin_role = message.guild.roles.find('name', settings.adminrolename);
-	if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 3;
-	let overlord = message.guild.roles.find('name', settings.overlord);
-	if (overlord && message.member.roles.has(overlord.id)) permlvl = 4;
-	if (message.author.id === settings.ownerid) permlvl = 4;
+	let follower = message.guild.roles.find('name', settings.followerrolename);
+	if (follower && message.member.roles.has(follower.id)) permlvl = 1;
+	let player = message.guild.roles.find('name', settings.playerrolename);
+	if (player && message.member.roles.has(player.id)) permlvl = 2;
+	let overseer = message.guild.roles.find('name', settings.overseerrolename);
+	if (overseer && message.member.roles.has(overseer.id)) permlvl = 3;
+	let trusted = message.guild.roles.find('name', settings.trustedrolename);
+	if (trusted && message.member.roles.has(trusted.id)) permlvl = 4;
+	let overlord = message.guild.roles.find('name', settings.overlordrolename);
+	if (overlord && message.member.roles.has(overlord.id)) permlvl = 5;
+	if (message.author.id === settings.ownerid) permlvl = 5;
 	return permlvl;
 };
 
-var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-
-client.on('warn', e => {
-	console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
-});
-
-client.on('error', e => {
-	console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
-});
+// var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
+//
+// client.on('warn', e => {
+// 	console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
+// });
+//
+// client.on('error', e => {
+// 	console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
+// });
 
 
 

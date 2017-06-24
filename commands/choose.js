@@ -17,6 +17,6 @@ exports.conf = {
 
 exports.help = {
 	name: 'choose',
-	description: 'Supply a comma seperated list with no spaces. Ex. 1,10.20. The bot will choose for you',
+	description: 'Supply a comma seperated list with no spaces. Ex. 1,10,20. The bot will choose for you',
 	usage: 'choose'
 };
