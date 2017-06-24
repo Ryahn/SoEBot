@@ -4,3 +4,4 @@ node_modules/
 *.csv
 update.php
 update-config.php
+app/core/Settings.php
