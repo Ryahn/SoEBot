@@ -1,5 +1,5 @@
 <?php
-require_once('core/init.php');
+require_once('app/init.php');
 
 try {
     $user = DB::getDBI()->query("SELECT user FROM tbl_users WHERE user = ?", array('Ryahn'));
