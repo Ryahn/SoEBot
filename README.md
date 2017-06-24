@@ -1,8 +1,10 @@
-# SoEBot
+# SoEBot Web Panel
+This is the web panel for the SoEBot. Its mainly a static panel but hope to learn to write in nodejs at some point. For now, it will be basic.
 
-Bot for Discord that performs various tasks to help users and staff. Designed for SoE project and maintained by Ryahn.
 
-## Libraries Used
-* node.js
-* discord.js https://github.com/hydrabolt/discord.js/
-* mysql.js https://github.com/mysqljs/mysql
+Thank you to my friends at Kriekon on helping me learn MVC.
+
+### Thank you to
+> Peter
+> Hearts
+> V. Marone
